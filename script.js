@@ -5,6 +5,8 @@ const password = "qwe123";
     if( (localStorage.getItem("user") == username && localStorage.getItem("userPass") == password)){
         loggedIn();
     }
+
+
 //En funktion som kollar att värdena i inloggningsfälten stämmer överns med Saras inloggningsinformation
 function submitLogin(){
     //Definerar två värden som är lika med de värden som finns i inloggningfälten
@@ -21,9 +23,10 @@ function submitLogin(){
     }
     //Om värdena är inkorrekta visas ett felmedelande samt en knapp för att försöka igen
     else{
+        //Definerar två värden som används for .appendChild() funktionen
         const loginFieldById = document.getElementById("loginField");
         const loginPromptById = document.getElementById("loginPrompt");
-        //Definerar två värden som används for .appendChild() funktionen
+        
 
         let errorMsg = document.createElement('div'); //skapar en div
         errorMsg.textContent = "Hopsan! Något gick fel..."; //ger diven text
@@ -41,6 +44,8 @@ function submitLogin(){
             } //Ger knappen en funktion som tar bort de tidigare skapade elementen och återigen visar inloggningsfälten
     }
 }
+
+
 
 //Gör sama sag som else checken i den tidigare funktionen men skapar istället ett välkomsmedelande och utloggningsknapp
 function loggedIn(){
@@ -61,6 +66,6 @@ function loggedIn(){
         loginPromptById.classList.remove("hidden");        
         welcomMsg.remove();
         logoutBtn.remove();
-        localStorage.clear; //Rensar local storage vid utloggning för att man inte ska förbli inloggad vid en ny session
+        localStorage.clear(); //Rensar local storage vid utloggning för att man inte ska förbli inloggad vid en ny session
     }
 }
