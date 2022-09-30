@@ -51,8 +51,10 @@ a:visited{
     color: azure;
 }
 
-
-
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* en klass för att enekelt ge alla fält på hemsidan samma design of layout */
 .container{
     display: flex;
     flex-direction: column;
@@ -65,7 +67,25 @@ a:visited{
     border-width: 2px;
     background-color: #ACD4DA;
 }
-
+/* klassen hidden används för att gömma element efter inloggning */
 .hidden{
     display: none;
+}
+
+button{
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #ACD4DA;
+    border-color: #2D4573;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #2D4573;
+    color: azure;
+}
+
+input{
+    border-radius: 10px;
+    height: 20px;
 }
